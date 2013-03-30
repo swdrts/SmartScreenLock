@@ -1,0 +1,4 @@
+SmartScreenLock
+===============
+
+Unlock screen automatically
