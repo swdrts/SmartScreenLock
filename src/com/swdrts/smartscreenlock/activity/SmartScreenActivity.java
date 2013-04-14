@@ -5,6 +5,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.KeyEvent;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -27,6 +28,16 @@ public class SmartScreenActivity extends Activity {
         setContentView(R.layout.activity_smart_screen_lock);
         Intent smartScreenLockServiceIntent = new Intent(this, SmartScreenLockService.class);
         this.startService(smartScreenLockServiceIntent);
+    }
+
+    /* (non-Javadoc)
+     * @see android.app.Activity#onKeyDown(int, android.view.KeyEvent)
+     */
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        // TODO Auto-generated method stub
+        Log.d(TAG,"onKeyDown");
+        return true;
     }
 
 }
